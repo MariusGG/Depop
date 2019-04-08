@@ -3,7 +3,7 @@ import '../styles/product.css';
 import { Card } from 'react-bootstrap';
 import Likes from './likes';
 
-export default class Products extends React.Component {
+class Products extends React.Component {
     constructor() {
       super();
       this.state = {
@@ -21,22 +21,14 @@ export default class Products extends React.Component {
        return (
          <div class="row">
            <div class="column">
-             <Card className="card">
+             <Card className="card" key={item.products}>
               <Card.Img variant="top" src={item.img} alt={item.description} />
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
-                <Card.Text>
-                    {item.brand}
-                  </Card.Text>
-                  <Card.Text>
-                    {item.size}
-                  </Card.Text>
-                  <Card.Text>
-                    £{item.price}
-                </Card.Text>
-                <div>
-                  <Likes />
-                </div>
+                <Card.Text>{item.brand}</Card.Text>
+                  <Card.Text>{item.size}</Card.Text>
+                  <Card.Text>£{item.price}</Card.Text>
+                <div><Likes /></div>
               </Card.Body>
             </Card>
           </div>
@@ -54,9 +46,10 @@ export default class Products extends React.Component {
     return (
 
       <div className="App">
-        <h1>Welcome to my React App! </h1>
+        <h1>Welcome to my Shop! </h1>
         <div>{ this.state.products }</div>
       </div>
     );
   }
 }
+export default Products;
