@@ -51,4 +51,4 @@ let url = 'https://5c78274f6810ec00148d0ff1.mockapi.io/api/v1/products';
 to be called in the componentDidMount function.
 
 
-I have commented out the productDetails and ProductImg, which where functional components which I was planning on building up. I felt this would remove the use of logic in every component and allow the functional components to be purely presentational purposes.
+I have commented out the productDetails and ProductImg, which are functional components and I intend on building up. I felt this would remove the use of logic in every component and allow the functional components to be purely presentational purposes.
